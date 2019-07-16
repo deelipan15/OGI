@@ -1,0 +1,126 @@
+@mixin navigationmenu{
+	padding-bottom: 25px;
+	position: fixed;
+	display: block;
+	overflow: hidden;
+	background-color: transparent;
+	width: 100%;
+	margin: 0 auto;
+	top: 0;
+	padding: 15px 90px;
+	z-index: 4;
+	border-bottom: 1px solid transparent;
+	transition: all 0.5s linear;
+	&:after{
+		clear: both;
+		content: "";
+		display: block;
+	}
+	> .brand{
+		float: left;
+		font-size: 20px;
+		color: #c71122;
+		cursor: default;
+	}
+	> ul{
+		float: right;
+		margin: 0; 
+		list-style-type: none;
+		background-color: transparent;
+		transition: background-color 0.5s linear;
+		> li{
+			display: inline-block;
+			margin: 5px 5px 0;
+			> a{
+				text-decoration: none;
+				color: #c71122;
+				font-size: 16px;
+				transition: color 0.5s;
+				padding: 10px 15px;
+				transition: color 0.5s linear;
+				font-weight: 400;
+				&:hover{
+					color: #141720;
+					transition: color 0.5s linear;
+				}
+			}
+		}
+	}
+	> .navigation_control{
+		display: none;
+		cursor: pointer;
+		font-size: 16px;
+	    top: 15px;
+	    right: 90px;
+	    position: absolute;
+	    color: #c71122;
+	    border: 1px solid transparent;
+		padding: 4px 8px;
+		transition: all 0.3s linear;
+		border-radius: 5px;
+		&:hover{
+			border-color: #c71122;
+			transition: all 0.3s linear;
+		}
+	}
+	&.navbar_opened{
+		> ul{
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: 10px 0;
+			> li{
+				display: block;
+				padding: 10px 0;
+			}
+		}
+		> .navigation_control{
+			> i{
+				&:before{
+					content: "\f00d";
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 880px) {
+	.navigation_control{
+    	display: block !important;
+    }
+    .header_navigation{
+    	> ul{
+    		display: none;
+    	}
+    }
+}
+@media only screen and (max-width: 560px){
+	.header_navigation{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}
+@media only screen and (max-width: 560px){
+	.header_navigation{
+		padding-left: 30px;
+		padding-right: 30px;
+		> ul{
+			> li{
+				>a{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 881px) {
+	.header_navigation{
+		> ul{
+			width: auto !important;
+			margin: 0 !important;
+			> li{
+				display: inline-block !important;
+				padding: 0 !important;
+			}
+		}
+	}
+}

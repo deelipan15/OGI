@@ -1,0 +1,62 @@
+form{
+	position: relative;
+	> input{
+		background-color: transparent;
+		border: 0;
+		border-bottom: 1px solid #fff;
+		outline: none;
+		border-radius: 0;
+		color: #fff;
+		margin-top: 30px;
+		width: 100%;
+		font-size: 15px;
+		padding: 6px 0;
+		transition: all 0.2s linear;
+		&:focus{
+			outline: none !important;
+	    	transition: all 0.2s linear;
+		}
+	}
+	> textarea{
+		background-color: transparent;
+		height: 200px;
+		margin-top: 30px;
+		padding-left: 0;
+		border: 0;
+		border-bottom: 1px solid #fff;
+		outline: none;
+		border-radius: 0;
+		color: #fff;
+		resize: none;
+		width: 100%;
+		font-size: 15px;
+		padding-bottom: 70px;
+		transition: all 0.2s linear;
+	}
+	> button{
+		height: 50px;
+		width: 170px;
+		background-color: #c71122;
+		border-radius: 25px;
+		font-size: 15px;
+		font-weight: 200;
+		position: absolute;
+		bottom: 15px;
+		right: 0;
+		outline: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		color: #fff;
+		&:hover{
+			color: #fff;
+			box-shadow: 0 1px 10px #455a64;
+		}
+	}
+	> label{
+		font-size: 15px;
+		display: none;
+		color: #c71122;
+		transition: all 0.2s linear;
+		animation: labelanimate 0.1s linear;
+	}
+}

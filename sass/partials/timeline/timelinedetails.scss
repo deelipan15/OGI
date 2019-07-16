@@ -1,0 +1,35 @@
+@mixin timelinedetails{
+	padding: 130px 120px 248px 115px;
+	display: table-cell;
+	color: #2b2b2b;
+	vertical-align: top;
+	> h2{
+		animation: slide_left 0.1s linear forwards;
+		transform: translateX(500px);
+		font-weight: 200;
+		font-size: 28px;
+	}
+	> p{
+		margin-top: 40px;
+		font-size: 15px;
+		line-height: 1.428;
+		font-weight: lighter;
+		&:nth-child(2){
+			animation: slide_left 0.2s linear forwards;
+			transform: translateX(500px);
+		}
+		&:nth-child(3){
+			animation: slide_left 0.3s linear forwards;
+			transform: translateX(500px);
+		}
+	}
+	&.date_one_details{
+		display: none;
+	}
+	&.date_two_details{
+		display: none;
+	}
+	&.current_details{
+		display: none;
+	}
+}

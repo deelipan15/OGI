@@ -1,0 +1,50 @@
+.hiring{
+	width: 100%;
+	z-index: 3;
+	position: relative;
+	display: table;
+	> div{
+		display: table-cell;
+		width: 50%;
+		vertical-align: middle;
+		&:last-child{
+			color: #fff;
+			background-color: #141720;
+			padding: 0 120px;
+			> p{
+				line-height: 16px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 880px){
+	.hiring{
+		display: block;
+		> div{
+			width: 100%;
+			display: block;
+			&:last-child{
+				padding: 145px 90px 166px;
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 560px){
+	.hiring{
+		div{
+			&:last-child{
+				padding: 110px 60px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 460px){
+	.hiring{
+		div{
+			&:last-child{
+				padding: 80px 30px;
+			}
+		}
+	}
+}

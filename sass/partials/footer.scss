@@ -1,0 +1,65 @@
+@import "./footer/inputfield";
+@import "./footer/bordertransformation";
+footer{
+	z-index: 3;
+	position: relative;
+	display: table;
+	width: 100%;
+	transition: all 0.6s linear;
+	> div{
+		display: table-cell;
+		width: 50%;
+		vertical-align: middle;
+		&:first-child{
+			background-color: #141720;
+			color: #fff;
+			padding: 0 120px;
+		}
+	}
+	> form{
+		::-webkit-input-placeholder { 
+		    color: #fff !important;
+		}
+		:-moz-placeholder { 
+		   color: #fff !important;
+		   opacity: 1;
+		}
+		::-moz-placeholder { 
+		   color: #fff !important;
+		   opacity: 1;
+		}
+		:-ms-input-placeholder { 
+		   color: #fff !important;
+		}
+	}
+}
+@media only screen and (max-width: 880px){
+	footer{
+		display: block;
+		> div{
+			width: 100%;
+			display: block;
+			&:first-child{
+				padding: 103px 90px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 560px){
+	footer{
+		> div{
+			&:first-child{
+				padding: 110px 60px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 460px){
+	footer{
+		> div{
+			&:first-child{
+				padding: 80px 30px;
+			}
+		}
+	}
+}

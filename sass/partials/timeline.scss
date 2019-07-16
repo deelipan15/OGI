@@ -1,0 +1,51 @@
+@import "./timeline/timelinelists";
+@import "./timeline/timelinedetails";
+.timeline{
+	z-index: 3;
+	position: relative;
+	background-color: #fff;
+	display: table;
+	> .timeline_lists{
+		@include timelinelists;
+	}
+	> .timeline_details{
+		@include timelinedetails;
+	}
+}
+@media only screen and (max-width: 880px){
+	.timeline{
+		display: block;
+		> .timeline_lists{
+			border-bottom: 2px solid #d5d5d5;
+			width: 100%;
+			display: block;
+		}
+		> .timeline_details{
+			padding: 130px 90px 248px;
+			width: 100%;
+			display: block;
+		}
+	}
+}
+@media only screen and (max-width: 560px){
+	.timeline{
+		> .timeline_lists{
+			padding-left: 180px;
+			padding-bottom: 110px;
+		}
+		> .timeline_details{
+			padding: 110px 60px;
+		}
+	}
+}
+@media only screen and (max-width: 460px){
+	.timeline{
+		.timeline_lists{
+			padding-left: 85px;
+			padding-bottom: 80px;
+		}
+		.timeline_details{
+			padding: 80px 30px;
+		}
+	}
+}

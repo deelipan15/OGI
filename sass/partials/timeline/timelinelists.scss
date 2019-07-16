@@ -1,0 +1,71 @@
+@mixin timelinelists{
+	padding-left: 270px;
+	padding-bottom: 190px;
+	width: 50%;
+	display: table-cell;
+	vertical-align: top;
+	> ul{
+		list-style-image: url(../Images/Oval.png);
+		border-left: 3px solid #d5d5d5;
+		padding-left: 16px;
+		> li{
+			position: relative;
+			font-size: 16px;
+			> a{
+				font-size: 18px;
+				text-decoration: none;
+				font-weight: 200;
+				color: #000;
+				vertical-align: top;
+				cursor: pointer;
+			}
+			&:nth-child(1){
+				padding-top: 150px;
+				&:before{
+					position: absolute;
+					left: -70px;
+					content: "2003";
+					color: #d5d5d5;
+				}
+			}
+			&:nth-child(2){
+				padding-top: 60px;
+				&:before{
+					position: absolute;
+					left: -70px;
+					content: "2006";
+					color: #d5d5d5;
+				}
+			}
+			&:nth-child(3){
+				padding-top: 80px;
+				&:before{
+					position: absolute;
+					left: -70px;
+					content: "2010";
+					color: #d5d5d5;
+				}
+			}
+			&:nth-child(4){
+				padding-top: 140px;
+				line-height: 10px;
+				&:before{
+					position: absolute;
+					left: -70px;
+					bottom: 5px;
+					content: "2016";
+					color: #d5d5d5;
+				}
+				> a{
+					vertical-align: text-top;
+				}
+			}
+			&.active{
+				list-style: url(../Images/Ovalred.png) !important;
+				&:before{
+					color: #c71122;
+				}
+			}
+		}
+	}
+}

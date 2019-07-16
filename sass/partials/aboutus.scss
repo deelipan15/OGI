@@ -1,0 +1,52 @@
+.about_us{
+	width: 100%;
+	margin-top: 690px;
+	z-index: 3;
+	position: relative;
+	display: table;
+	> div{
+		display: table-cell;
+		width: 50%;
+		vertical-align: middle;
+		&:first-child{
+			color: #fff;
+			background-color: #141720;
+			padding: 0 120px;
+			> p{
+				line-height: 16px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 880px){
+	.about_us{
+		display: block;
+		> div{
+			width: 100%;
+			display: block;
+			&:first-child{
+				padding: 145px 90px 166px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 560px){
+	.about_us{
+		margin-top: 510px;
+		div{
+			&:first-child{
+				padding: 110px 60px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 460px){
+	.about_us{
+		margin-top: 400px;
+		div{
+			&:first-child{
+				padding: 80px 30px;
+			}
+		}
+	}
+}

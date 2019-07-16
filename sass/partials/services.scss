@@ -1,0 +1,80 @@
+.services{
+	z-index: 3;
+	position: relative;
+	background-color: #efefef;
+	padding: 110px 120px;
+	text-align: center;
+	width: 100%;
+	> ul{
+		list-style-type: none;
+		width: 100%;
+		text-align: left;
+		padding-left: 0;
+		> li{
+			display: inline-block;
+			width: calc(100%/3);
+			padding: 50px 15px 30px;
+			margin-top: 30px;
+			background-position-x: 15px !important;
+			> p{
+				color: #5d5f65;
+				line-height: 16px;
+				font-weight: 400;
+				margin: 0;
+			}
+			> h3{
+				color: #141720;
+					margin-top: 20px;
+					margin-bottom: 10px;
+			}
+			&:nth-child(1){
+				background: url('../Images/wallet.png') no-repeat left top;
+			}
+			&:nth-child(2){
+				background: url('../Images/Smile.png') no-repeat left top;
+			}
+			&:nth-child(3){
+				background: url('../Images/Heart.png') no-repeat left top;
+			}
+			&:nth-child(4){
+				background: url('../Images/Rocket.png') no-repeat left top;
+			}
+			&:nth-child(5){
+				background: url('../Images/Joystick.png') no-repeat left top;
+			}
+			&:nth-child(6){
+				background: url('../Images/Phone.png') no-repeat left top;
+			}
+		}
+	}
+	> h2{
+		color: #2b2b2b;
+	}
+}
+@media only screen and (max-width: 880px){
+	.services{
+		padding: 110px 90px;
+		> h2{
+			margin: 30px 0 40px;
+		}
+		> ul{
+			> li{
+				display: block;
+				width: 100%;
+				padding: 40px 30px;
+				text-align: center;
+				background-position: top !important;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 560px){
+	.services{
+		padding: 110px 60px;
+	}
+}
+@media only screen and (max-width: 460px){
+	.services{
+		padding: 80px 30px;
+	}
+}

@@ -1,0 +1,23 @@
+h2{
+	font-size: 28px;
+	font-weight: 200;
+}
+h3{
+	font-size: 20px;
+	font-weight: 200;
+}
+p{
+	font-size: 15px;
+	font-weight: 200;
+}
+@media only screen and (max-width: 560px){
+	h2{
+		font-size: 20px;
+	}
+	h3{
+		font-size: 16px;
+	}
+	p{
+		font-size: 12px;
+	}
+}

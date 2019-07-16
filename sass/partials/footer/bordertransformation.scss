@@ -1,0 +1,79 @@
+@mixin bordertransformation{
+	display: block;
+	content: "";
+	border-bottom: 1px solid #c71122;
+	transform: scaleX(0);
+	transition: transform 0.1s linear;
+}
+.name{
+	position: absolute;
+	top: 70px;
+}
+.email{
+	position: absolute;
+	top: 130px;
+}
+.message{
+	position: absolute;
+	top: 185px;
+}
+.bordername{
+	position: absolute;
+	top: 94px;
+	width: 100%;
+	&:after{
+		@include bordertransformation;
+	}
+}
+.bordermail{
+	position: absolute;
+	top: 154px;
+	width: 100%;
+	&:after{
+		@include bordertransformation;
+	}
+}
+.bordermessage{
+	position: absolute;
+	top: 384px;
+	width: 100%;
+	&:after{
+		@include bordertransformation;
+	}
+}
+.bordertransform{
+	&:after{
+		transform: scaleX(1);
+	}
+}
+@media only screen and (max-width:880px){
+	.bordername{
+		top:95px;
+	}
+	.bordermail{
+		top: 155px;
+	}
+	.bordermessage{
+		top: 385px;
+	}
+}
+@media only screen and (max-width:560px){
+	.name{
+		top: 55px;
+	}
+	.email{
+		top: 115px;
+	}
+	.message{
+		top:170px;
+	}
+	.bordername{
+		top:82px;
+	}
+	.bordermail{
+		top: 142px;
+	}
+	.bordermessage{
+		top: 372px;
+	}
+}
